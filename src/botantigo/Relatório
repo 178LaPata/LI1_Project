@@ -1,0 +1,62 @@
+Tarefa 5
+
+-- REVER O PORTUGUÊS EM TODOS OS TÓPICOS
+
+
+
+Introdução 
+
+Nesta tarefa, tentamos calcular o caminho mais rápido entre duas posições num labirinto para devolver aos fantasmas uma orientação bastante acertiva. 
+Tentamos também fazer um algoritmo de fuga rudimentar.
+
+
+
+Objetivos 
+
+Começamos por tentar calcular o caminho mais curto experimentando todos os caminhos possiveis (é possivel ver na função ESCREVERNOME).
+
+Chegamos a conclusão que este metódo era eficiente para labirintos até 10x10, a partir disso demorava demasiado tempo para calcular o caminho mais curto. 
+
+Numa segunda tentativa, para otimizar, experimentamos escrever numa matriz de números o comprimento do caminho percorrido até ao momento no respetivo arco do percurso.
+
+Nesta variante calculo o caminho recursivamente numa direçao, depois devolvo a matriz e passo-a para as outras direçoes.Conluimosque ao aplicar esta forma recursiva mais linearmente(para as 4 direções) constata-se que se dá prioridade a algumas direçoes, que funciona muito rápido para labirintos de grandes dimensões (200x200) mas que por vezes não calcula o caminho mais curto.
+
+
+Na terceira variante , conseguimos fazer um algoritmo que cumpre todos os requesitos. Este começa por marcar o destino como 0 depois marco os vizinhos do 0 com 1 (de comprimento) se estes não forem paredes e não tiverem já um valor inferior, depois marco  os vizinhos de cada 1 com 2 e assim sucessivamente.
+
+No final de ambos os algoritmos, utilizo uma funçao de descompactação que dado uma matriz com os comprimentos calcula Uma lista de Orientaçoes até chegar ao destino, para fins mais práticos uso uma outra que me devolve apenas a primeira orientação(necessária para o movimento)
+
+
+Utilizamos um algoritmo rudimentar de fuga, sendo este o seguerido no enunciado.
+
+
+Conclusão
+
+
+Conseguimos calcular o caminho mais curto de maneira efeciente e rápida. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
